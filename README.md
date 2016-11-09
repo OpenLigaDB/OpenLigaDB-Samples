@@ -11,6 +11,8 @@ Der Abruf der Daten per JSON-Api erfolgt dann je nach Detailtiefe dem Schema
 
 > https://www.openligadb.de/api/getmatchdata/LeagueShortcut/LeagueSeason/GroupOrderId
 
+Der Server liefert je nach Accept-Header JSON oder XML zurück (Stichwort [Content Negotiation](https://weblog.west-wind.com/posts/2012/aug/21/an-introduction-to-aspnet-web-api#ContentNegotiation))
+
 Zusätzlich ist der Abruf der Daten 
 per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx](https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx) abrufbar.
 
