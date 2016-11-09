@@ -9,7 +9,7 @@ Zum Abrufen der Liga-Daten der OpenligaDB werden im wesentlichen folgende Parame
 
 Der Abruf der Daten per JSON-Api erfolgt dann je nach Detailtiefe dem Schema
 
-> https://www.openligadb.de/api/getmatchdata/*LeagueShortcut*/*LeagueSeason*/*GroupOrderId*
+> https://www.openligadb.de/api/getmatchdata/LeagueShortcut/LeagueSeason/GroupOrderId
 
 Der nachfolgende Anschnitt soll dies Anhand von Beispielen verdeutlichen. Zusätzlich ist der Abruf der Daten 
 per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx](https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx) abrufbar.
