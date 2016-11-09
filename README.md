@@ -11,13 +11,14 @@ Der Abruf der Daten per JSON-Api erfolgt dann je nach Detailtiefe dem Schema
 
 > https://www.openligadb.de/api/getmatchdata/LeagueShortcut/LeagueSeason/GroupOrderId
 
-Der nachfolgende Anschnitt soll dies Anhand von Beispielen verdeutlichen. Zusätzlich ist der Abruf der Daten 
+Zusätzlich ist der Abruf der Daten 
 per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx](https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx) abrufbar.
 
 
 
 ## Api-Schema
----
+Nachfolgend wird das Api-Schema anhand von Beispielen dargestellt:
+
 Spiele des 8. Spieltages der ersten Bundesliga 2016/2017:
 > [https://www.openligadb.de/api/getmatchdata/bl1/2016/8](https://www.openligadb.de/api/getmatchdata/bl1/2016/8)
 
