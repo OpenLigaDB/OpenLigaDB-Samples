@@ -41,6 +41,11 @@ Die aktuelle Group (entspricht z.B. bei der Fussball-Bundesliga dem 'Spieltag') 
 
 Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
 
+
+---
+Eine Liste der Spiel-Einteilungen (Spieltag, Vorrunde, Finale, ...) der als Parameter zu übergebenden Liga + Saison zurueck
+> [https://www.openligadb.de/api/getavailablegroups/bl1/2016](https://www.openligadb.de/api/getavailablegroups/bl1/2016)
+
 ---
 Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2016/2017.
 > [https://www.openligadb.de/api/getlastchangedate/bl1/2016/8](https://www.openligadb.de/api/getlastchangedate/bl1/2016/8)
@@ -51,12 +56,9 @@ Diese Methode dient zur Ermittlung der Änderung von Spieldaten, um unnötiges P
 Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenfalls zu übergebenen Liga:
 > [https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7](https://www.openligadb.de/getnextmatchbyleagueteam/3005/7)
 
-- die '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
-- die '7' entspricht der TeamId von Borussia Dortmund
+- '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
+- '7' entspricht der TeamId von Borussia Dortmund
 
----
-Der aktuelle Spieltag der ersten Bundesliga.
-> [https://www.openligadb.de/api/getcurrentgroup/bl1](https://www.openligadb.de/api/getcurrentgroup/bl1)
 
 
 
