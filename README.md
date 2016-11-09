@@ -22,12 +22,24 @@ per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsd
 Nachfolgend wird das Api-Schema anhand von Beispielen dargestellt:
 
 ---
+Spiele des aktuellen Spieltages der ersten Bundesliga:
+> [https://www.openligadb.de/api/getmatchdata/bl1](https://www.openligadb.de/api/getmatchdata/bl1)
+
+Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
+
+---
 Spiele des 8. Spieltages der ersten Bundesliga 2016/2017:
 > [https://www.openligadb.de/api/getmatchdata/bl1/2016/8](https://www.openligadb.de/api/getmatchdata/bl1/2016/8)
 
 ---
-Alle Spiele der ersten Bundesliga 2016/2017
+Alle Spiele der ersten Bundesliga 2016/2017:
 > [https://www.openligadb.de/api/getmatchdata/bl1/2016](https://www.openligadb.de/api/getmatchdata/bl1/2016)
+
+---
+Die aktuelle Group (entspricht z.B. bei der Fussball-Bundesliga dem 'Spieltag') des als Parameter zu übergebenden leagueShortcuts (z.B. 'bl1'):
+> [https://www.openligadb.de/api/getcurrentgroup/bl1](https://www.openligadb.de/api/getcurrentgroup/bl1)
+
+Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
 
 ---
 Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2016/2017.
