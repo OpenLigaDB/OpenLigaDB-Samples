@@ -48,8 +48,19 @@ Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der erste
 Diese Methode dient zur Ermittlung der Änderung von Spieldaten, um unnötiges Pollen der o.g. Service-Methoden zu vermeiden.
 
 ---
+Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenfalls zu übergebenen Liga:
+> [https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7](https://www.openligadb.de/getnextmatchbyleagueteam/3005/7)
+
+- die '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
+- die '7' entspricht der TeamId von Borussia Dortmund
+
+---
 Der aktuelle Spieltag der ersten Bundesliga.
 > [https://www.openligadb.de/api/getcurrentgroup/bl1](https://www.openligadb.de/api/getcurrentgroup/bl1)
+
+
+
+
 
 
 
