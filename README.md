@@ -36,6 +36,10 @@ Alle Spiele der ersten Bundesliga 2016/2017:
 > [https://www.openligadb.de/api/getmatchdata/bl1/2016](https://www.openligadb.de/api/getmatchdata/bl1/2016)
 
 ---
+Spiel mit der Id 39738:
+> [https://www.openligadb.de/api/getmatchdata/39738](https://www.openligadb.de/api/getmatchdata/39738)
+
+---
 Die aktuelle Group (entspricht z.B. bei der Fussball-Bundesliga dem 'Spieltag') des als Parameter zu übergebenden leagueShortcuts (z.B. 'bl1'):
 > [https://www.openligadb.de/api/getcurrentgroup/bl1](https://www.openligadb.de/api/getcurrentgroup/bl1)
 
