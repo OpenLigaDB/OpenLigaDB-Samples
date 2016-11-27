@@ -18,16 +18,31 @@ namespace OpenLigaDB.Samples.DemoConsole
 
         static async Task RunAsync()
         {
-            client.BaseAddress = new Uri("http://www.openligadb.de/");
+            client.BaseAddress = new Uri("https://www.openligadb.de/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var matches = await GetMatchesAsync("api/getmatchdata/bl1/2016/8");
-
-            foreach (var match in matches)
+            do
             {
-                Console.WriteLine(string.Concat(match.MatchDateTime,": ", match.Team1.TeamName," : ", match.Team2.TeamName));
-            }
+                try
+                {
+                    var matches = await GetMatchesAsync("api/getmatchdata/bl1/2016/11");
+
+                    foreach (var match in matches)
+                    {
+                        Console.WriteLine(string.Concat(match.MatchDateTime, ": ", match.Team1.TeamName, " : ", match.Team2.TeamName));
+                    }
+
+                    System.Threading.Thread.Sleep(5000);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    System.Threading.Thread.Sleep(5000);
+
+                }
+
+            } while (true);
 
 
             Console.ReadLine();
