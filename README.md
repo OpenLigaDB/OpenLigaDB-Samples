@@ -63,6 +63,10 @@ Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenf
 - '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
 - '7' entspricht der TeamId von Borussia Dortmund
 
+---
+Alle Teams einer Liga:
+> [https://www.openligadb.de/api/getavailableteams/bl1/2016](https://www.openligadb.de/api/getavailableteams/bl1/2016)
+
 
 
 
