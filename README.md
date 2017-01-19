@@ -58,7 +58,7 @@ Diese Methode dient zur Ermittlung der Änderung von Spieldaten, um unnötiges P
 
 ---
 Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenfalls zu übergebenen Liga:
-> [https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7](https://www.openligadb.de/getnextmatchbyleagueteam/3005/7)
+> [https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7](https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7)
 
 - '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
 - '7' entspricht der TeamId von Borussia Dortmund
