@@ -45,7 +45,7 @@ $matches = json_decode($output, true);
 </head>
 
 <body>
-<h1>Fu_balldaten per PHP abrufen</h1>
+<h1>Fußballdaten per PHP abrufen</h1>
 <h2>Spielergebnisse, Tore und mehr unter <a href="http://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
 
 <div>
