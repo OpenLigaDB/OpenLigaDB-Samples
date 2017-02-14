@@ -17,6 +17,22 @@ Zusätzlich ist der Abruf der Daten
 per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx](https://www.OpenLigaDB.de/Webservices/Sportsdata.asmx) abrufbar.
 
 
+### Ligen-Priorität
+Die OpenligaDB ermöglicht es jedem interessierten Nutzer, eine eigene Liga anzulegen und zu pflegen. Dies führt in vielen
+Fällen zum Vorhandensein gleichartiger Ligen, welche dann unter Umständen nicht vollständig gepflegt werden.
+
+Um zu erkennen, welche Liga "produktiv" ist, gibt es intern eine Priorisierung der Ligen anhand der
+Anzahl ihrer Abfragen. So erfolgt z.B. die Sortierung der Ligen im Auswahl-Fenster nach diesem
+Prioritäts-Index - die "offiziellen" Ligen stehen hier oben. Dieser Index wird demnächst in weiteren Teilen
+der Oberfläche Einzug halten und die Auswahl transparenter machen.
+
+FÜr die Fußball-Bundesligen hat sich z.B. ein durchgehendes Namens-Schema entwickelt. So haben die erste bis
+dritte Bundesliga stets den LeaguShortcut "bl1", "bl2" und "bl3". Der Parameter LeagueSeason bestimmt dann
+die aktuelle Saison. Leider ist das z.B. bei der Champions League oder beim DFB-Pokal nicht so eindeutig
+angelegt worden.
+
+Auf [Anfrage](mailto:&#079;&#112;&#101;&#110;&#076;&#105;&#103;&#097;&#068;&#066;&#064;&#109;&#115;&#105;&#103;&#103;&#105;&#046;&#100;&#101;) werden hier auch relativ "locker" Rechte zum Editieren der Spielansetzungen für Ligen verteilt, um
+die Arbeit auf mehrere Schultern zu verteilen.
 
 ## Api-Schema
 Nachfolgend wird das Api-Schema anhand von Beispielen dargestellt:
@@ -70,7 +86,7 @@ Alle Teams einer Liga:
 
 
 
-
+ds
 
 
 
