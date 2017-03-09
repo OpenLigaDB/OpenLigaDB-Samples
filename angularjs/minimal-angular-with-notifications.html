@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html ng-app="oldbApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>OpenLigaDB - Minimal Angularjs-V1-Sample</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        td {
+            padding: 3px 5px 3px 5px;
+        }
+
+        table {
+            margin-top: 30px;
+        }
+
+        span {
+            padding-right: 8px;
+        }
+    </style>
+</head>
+
+<body ng-controller="OldbCtrl">
+    <h1>{{ title }}</h1>
+    <h2>Spielergebnisse, Tore und mehr unter <a href="https://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
+
+    <div>
+        Spieltag:
+        <input type="text" ng-model="spieltag" />
+        <button ng-click="ladeDaten()">Lade Spieltag {{spieltag}} (Testliga "msiggitest")</button>
+        <table ng-show="matches.length > 0">
+            <thead>
+                <tr>
+                    <th>MatchId</th>
+                    <th>Datum</th>
+                    <th>Team1</th>
+                    <th>Team2</th>
+                    <th>Ergebnisse</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="match in matches track by $index">
+                    <td valign="top">{{ match.MatchID }}</td>
+                    <td valign="top">{{ match.MatchDateTime}}</td>
+                    <td valign="top">{{ match.Team1.TeamName}}</td>
+                    <td valign="top">{{ match.Team2.TeamName}}</td>
+                    <td valign="top">
+                        <div ng-repeat="goal in match.Goals track by $index">
+                            <span>{{goal.ScoreTeam1}}:{{goal.ScoreTeam2}}</span>
+                            <span>{{goal.GoalGetterName}}</span>
+                            <span>Minute {{goal.MatchMinute}}</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script type="text/javascript">
+        var oldbApp = angular.module('oldbApp', []);
+
+        oldbApp.controller('OldbCtrl', function ($scope, $http) {
+
+            $scope.title = 'Fußballdaten per JavaScript abrufen!';
+            $scope.spieltag = "1";
+            $scope.matches = [];
+
+            // ********** SignalR ****************************
+            var connection = $.hubConnection();
+
+            //connection.logging = true;
+            connection.url = "https://www.openligadb.de/signalr";
+            var proxy = connection.createHubProxy('OpenLigaDbNotificationHub');
+
+            window.hubReady = connection.start().done(function () {
+                console.log("SignalR-Connection has been started");
+            });
+
+            // Der Server ruft "matchWasUpdated" beim Client auf, sobald bei einem Spiel das Ergebnis geändert wurde.
+            // Das geänderte Spiel enthält "refreshedMatch"
+            proxy.on('matchWasUpdated', function (refreshedMatch) {
+                console.log(refreshedMatch);
+
+                angular.forEach($scope.matches, function (match, key) {
+                    if (match.MatchID === refreshedMatch.MatchID) {
+                        $scope.matches[key] = refreshedMatch;
+                    }
+                });
+
+                $scope.$apply();
+            });
+
+            // ********** /SignalR ****************************
+
+
+            $scope.ladeDaten = function () {
+                $http({
+                    method: 'Get',
+                    url: "https://www.openligadb.de/api/getmatchdata/mst/2016/" + $scope.spieltag
+                }).
+                    success(function (data, status) {
+                        $scope.matches = data;
+                    });
+            };
+
+
+            $scope.ladeDaten();
+        });
+    </script>
+
+
+</body>
+
+</html>
