@@ -19,7 +19,7 @@ per Soap-Webservice über die Url [https://www.OpenLigaDB.de/Webservices/Sportsd
 ### Berechtigungen
 Jeder angemeldete User darf Ligen anlegen, ist dann der "Administrator" seiner Ligen und nur dieser darf Teams und Spielansetzungen hinzufügen sowie die Ergebnistypen für seine Ligen festlegen. 
 
-Anders ist es bei den Spielergebnissen, diese können von JEDEM angemeldeten User editiert werden. Nach einer Zeit von 6 Tagen ist nach Spielende ist das Editieren der Ergebnisse nur noch dem Administrator der Liga möglich.
+Anders ist es bei den Spielergebnissen, diese können von JEDEM angemeldeten User editiert werden. Nach einer Zeit von 6 Tagen nach Spielende ist das Editieren der Ergebnisse nur noch dem Administrator der Liga möglich.
 
 Auf [Anfrage](mailto:&#079;&#112;&#101;&#110;&#076;&#105;&#103;&#097;&#068;&#066;&#064;&#109;&#115;&#105;&#103;&#103;&#105;&#046;&#100;&#101;) werden hier auch relativ "locker" Rechte zum Editieren der Spielansetzungen für Ligen verteilt, um
 die Arbeit auf mehrere Schultern zu verteilen. Es kann also auch mehrere Administratoren einer Liga geben.
