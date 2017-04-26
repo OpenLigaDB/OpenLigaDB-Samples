@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="oldbApp">
+
+<head>
+<meta charset="UTF-8" />
+    <title>OpenLigaDB - Minimal Angularjs-V1-Sample</title>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+    td{ padding: 3px 5px 3px 5px;}
+    table  {
+      margin-top: 30px;
+    }
+    
+  </style>
+</head>
+
+<body ng-controller="OldbCtrl">
+  <h1>{{ title }}</h1>
+<h2>Spielergebnisse, Tore und mehr unter <a href="http://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
+  
+  <div>
+    Spieltag:
+    <input type="text" ng-model="spieltag" />
+    <button ng-click="ladeDaten()">Lade Spieltag {{spieltag}} (Saison 2016/2017)</button>
+    <table ng-show="matches.length > 0">
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Team1</th>
+          <th>Team2</th>
+          <th>Ergebnisse</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat="match in matches">
+          <td>{{ match.MatchDateTime}}</td>
+          <td>{{ match.Team1.TeamName}}</td>
+          <td>{{ match.Team2.TeamName}}</td>
+          <td>
+                <div ng-repeat="result in match.MatchResults  | orderBy:'ResultOrderID'">
+                  {{ result.ResultName}}: <strong>{{ result.PointsTeam1}}:{{ result.PointsTeam2}}</strong>
+                </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script type="text/javascript">
+    var oldbApp = angular.module('oldbApp', []);
+
+    oldbApp.controller('OldbCtrl', function($scope, $http) {
+      $scope.title = 'Fußballdaten per JavaScript abrufen!';
+      $scope.spieltag = "1";
+      $scope.matches = [];
+
+      $scope.ladeDaten = function() {
+        $http({
+          method: 'Get',
+          url: "https://www.openligadb.de/api/getmatchdata/bl1/2016/" + $scope.spieltag
+        }).
+        success(function(data, status) {
+          $scope.matches = data;
+        });
+      };
+
+    });
+  </script>
+
+
+</body>
+
+</html>
