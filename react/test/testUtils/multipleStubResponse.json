@@ -1,0 +1,332 @@
+[
+  {
+"MatchID":40493,
+"MatchDateTime":"2017-03-25T14:00:00",
+"TimeZoneID":"W. Europe Standard Time",
+"LeagueId":3015,
+"MatchDateTimeUTC":"2017-03-25T13:00:00Z",
+"Group":{
+    "GroupName":"29. Spieltag",
+    "GroupOrderID":29,
+    "GroupID":24084
+},
+"Team1":{
+    "TeamId":202,
+    "TeamName":"Chemnitzer FC",
+    "ShortName":"",
+    "TeamIconUrl":"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Chemnitzer_FC_Logo.svg/200px-Chemnitzer_FC_Logo.svg.png"
+},
+"Team2":{
+    "TeamId":107,
+    "TeamName":"MSV Duisburg",
+    "ShortName":"",
+    "TeamIconUrl":"http://www.openligadb.de/images/teamicons/MSV_Duisburg.gif"
+},
+"LastUpdateDateTime":"2017-03-25T15:56:09.103",
+"MatchIsFinished":true,
+"MatchResults":[
+    {
+        "ResultID":73601,
+        "ResultName":"Halbzeitergebnis",
+        "PointsTeam1":1,
+        "PointsTeam2":1,
+        "ResultOrderID":1,
+        "ResultTypeID":1,
+        "ResultDescription":"Ergebnis nach Ende der ersten Halbzeit"
+    },
+    {
+        "ResultID":73616,
+        "ResultName":"Endergebnis",
+        "PointsTeam1":2,
+        "PointsTeam2":3,
+        "ResultOrderID":2,
+        "ResultTypeID":2,
+        "ResultDescription":"Ergebnis nach Ende der offiziellen Spielzeit"
+    }
+],
+"Goals":[
+    {
+        "GoalID":58341,
+        "ScoreTeam1":0,
+        "ScoreTeam2":1,
+        "MatchMinute":23,
+        "GoalGetterID":2319,
+        "GoalGetterName":"Wiegel",
+        "IsPenalty":false,
+        "IsOwnGoal":false,
+        "IsOvertime":false,
+        "Comment":null
+    },
+    {
+        "GoalID":58342,
+        "ScoreTeam1":1,
+        "ScoreTeam2":1,
+        "MatchMinute":41,
+        "GoalGetterID":14383,
+        "GoalGetterName":"Türpitz",
+        "IsPenalty":false,
+        "IsOwnGoal":false,
+        "IsOvertime":false,
+        "Comment":null
+    },
+    {
+        "GoalID":58352,
+        "ScoreTeam1":2,
+        "ScoreTeam2":1,
+        "MatchMinute":52,
+        "GoalGetterID":14383,
+        "GoalGetterName":"Türpitz",
+        "IsPenalty":false,
+        "IsOwnGoal":false,
+        "IsOvertime":false,
+        "Comment":null
+    },
+    {
+        "GoalID":58353,
+        "ScoreTeam1":2,
+        "ScoreTeam2":2,
+        "MatchMinute":68,
+        "GoalGetterID":11438,
+        "GoalGetterName":"Brandstetter",
+        "IsPenalty":false,
+        "IsOwnGoal":false,
+        "IsOvertime":false,
+        "Comment":null
+    },
+    {
+        "GoalID":58354,
+        "ScoreTeam1":2,
+        "ScoreTeam2":3,
+        "MatchMinute":74,
+        "GoalGetterID":1394,
+        "GoalGetterName":"Onuegbu",
+        "IsPenalty":false,
+        "IsOwnGoal":false,
+        "IsOvertime":false,
+        "Comment":null
+    }
+],
+"Location":null,
+"NumberOfViewers":null
+},
+{
+"MatchID":40493,
+"MatchDateTime":"2017-03-25T14:00:00",
+"TimeZoneID":"W. Europe Standard Time",
+"LeagueId":3015,
+"MatchDateTimeUTC":"2017-03-25T13:00:00Z",
+"Group":{
+  "GroupName":"29. Spieltag",
+  "GroupOrderID":29,
+  "GroupID":24084
+},
+"Team1":{
+  "TeamId":202,
+  "TeamName":"Chemnitzer FC",
+  "ShortName":"",
+  "TeamIconUrl":"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Chemnitzer_FC_Logo.svg/200px-Chemnitzer_FC_Logo.svg.png"
+},
+"Team2":{
+  "TeamId":107,
+  "TeamName":"MSV Duisburg",
+  "ShortName":"",
+  "TeamIconUrl":"http://www.openligadb.de/images/teamicons/MSV_Duisburg.gif"
+},
+"LastUpdateDateTime":"2017-03-25T15:56:09.103",
+"MatchIsFinished":true,
+"MatchResults":[
+  {
+      "ResultID":73601,
+      "ResultName":"Halbzeitergebnis",
+      "PointsTeam1":1,
+      "PointsTeam2":1,
+      "ResultOrderID":1,
+      "ResultTypeID":1,
+      "ResultDescription":"Ergebnis nach Ende der ersten Halbzeit"
+  },
+  {
+      "ResultID":73616,
+      "ResultName":"Endergebnis",
+      "PointsTeam1":2,
+      "PointsTeam2":3,
+      "ResultOrderID":2,
+      "ResultTypeID":2,
+      "ResultDescription":"Ergebnis nach Ende der offiziellen Spielzeit"
+  }
+],
+"Goals":[
+  {
+      "GoalID":58341,
+      "ScoreTeam1":0,
+      "ScoreTeam2":1,
+      "MatchMinute":23,
+      "GoalGetterID":2319,
+      "GoalGetterName":"Wiegel",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58342,
+      "ScoreTeam1":1,
+      "ScoreTeam2":1,
+      "MatchMinute":41,
+      "GoalGetterID":14383,
+      "GoalGetterName":"Türpitz",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58352,
+      "ScoreTeam1":2,
+      "ScoreTeam2":1,
+      "MatchMinute":52,
+      "GoalGetterID":14383,
+      "GoalGetterName":"Türpitz",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58353,
+      "ScoreTeam1":2,
+      "ScoreTeam2":2,
+      "MatchMinute":68,
+      "GoalGetterID":11438,
+      "GoalGetterName":"Brandstetter",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58354,
+      "ScoreTeam1":2,
+      "ScoreTeam2":3,
+      "MatchMinute":74,
+      "GoalGetterID":1394,
+      "GoalGetterName":"Onuegbu",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  }
+],
+"Location":null,
+"NumberOfViewers":null
+},
+{
+"MatchID":40493,
+"MatchDateTime":"2017-03-25T14:00:00",
+"TimeZoneID":"W. Europe Standard Time",
+"LeagueId":3015,
+"MatchDateTimeUTC":"2017-03-25T13:00:00Z",
+"Group":{
+  "GroupName":"29. Spieltag",
+  "GroupOrderID":29,
+  "GroupID":24084
+},
+"Team1":{
+  "TeamId":202,
+  "TeamName":"Chemnitzer FC",
+  "ShortName":"",
+  "TeamIconUrl":"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Chemnitzer_FC_Logo.svg/200px-Chemnitzer_FC_Logo.svg.png"
+},
+"Team2":{
+  "TeamId":107,
+  "TeamName":"MSV Duisburg",
+  "ShortName":"",
+  "TeamIconUrl":"http://www.openligadb.de/images/teamicons/MSV_Duisburg.gif"
+},
+"LastUpdateDateTime":"2017-03-25T15:56:09.103",
+"MatchIsFinished":true,
+"MatchResults":[
+  {
+      "ResultID":73601,
+      "ResultName":"Halbzeitergebnis",
+      "PointsTeam1":1,
+      "PointsTeam2":1,
+      "ResultOrderID":1,
+      "ResultTypeID":1,
+      "ResultDescription":"Ergebnis nach Ende der ersten Halbzeit"
+  },
+  {
+      "ResultID":73616,
+      "ResultName":"Endergebnis",
+      "PointsTeam1":2,
+      "PointsTeam2":3,
+      "ResultOrderID":2,
+      "ResultTypeID":2,
+      "ResultDescription":"Ergebnis nach Ende der offiziellen Spielzeit"
+  }
+],
+"Goals":[
+  {
+      "GoalID":58341,
+      "ScoreTeam1":0,
+      "ScoreTeam2":1,
+      "MatchMinute":23,
+      "GoalGetterID":2319,
+      "GoalGetterName":"Wiegel",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58342,
+      "ScoreTeam1":1,
+      "ScoreTeam2":1,
+      "MatchMinute":41,
+      "GoalGetterID":14383,
+      "GoalGetterName":"Türpitz",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58352,
+      "ScoreTeam1":2,
+      "ScoreTeam2":1,
+      "MatchMinute":52,
+      "GoalGetterID":14383,
+      "GoalGetterName":"Türpitz",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58353,
+      "ScoreTeam1":2,
+      "ScoreTeam2":2,
+      "MatchMinute":68,
+      "GoalGetterID":11438,
+      "GoalGetterName":"Brandstetter",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  },
+  {
+      "GoalID":58354,
+      "ScoreTeam1":2,
+      "ScoreTeam2":3,
+      "MatchMinute":74,
+      "GoalGetterID":1394,
+      "GoalGetterName":"Onuegbu",
+      "IsPenalty":false,
+      "IsOwnGoal":false,
+      "IsOvertime":false,
+      "Comment":null
+  }
+],
+"Location":null,
+"NumberOfViewers":null
+}
+]

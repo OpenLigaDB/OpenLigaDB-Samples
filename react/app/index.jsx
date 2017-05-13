@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GameCard from './components/GameCard.jsx';
+import Games from './components/Games.jsx';
 
 ReactDOM.render(
-    <GameCard matchID={40085}/>,
+    <Games url="https://www.openligadb.de/api/getmatchdata/bl3/2016/36"/>,
     document.getElementById('app')
 );

@@ -1,36 +1,30 @@
 import React from 'react'
 import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import Game from './Game.jsx'
 
-export default class GameCard extends React.Component{
+export default class Games extends React.Component{
 
   constructor(props){
     super(props);
 
     this.state = {
-			game: null
+			games: []
 		};
 
     this.fetchAllGames = this.fetchAllGames.bind(this);
   }
 
-  getUrl(){
-    return "https://www.openligadb.de/api/getmatchdata/"+this.props.matchID;
-  }
-
   fetchAllGames(){
 
-    const url = this.getUrl();
-
-    return axios.get(url);
+    return axios.get(this.props.url);
   }
 
   componentDidMount(){
     this.fetchAllGames()
       .then(result => {
         this.setState({
-          game: result.data
+          games: result.data
         });
       })
       .catch(error => {
@@ -39,11 +33,23 @@ export default class GameCard extends React.Component{
   }
 
   render(){
+
+    const listOfGames = this.state.games.map((game, index) => {
+
+      const props = {
+    			key: game.MatchID
+    		}
+
+      return (
+        <Game {...props}/>
+      );
+    });
+
     return(
       <MuiThemeProvider>
-        <Card>
-          <CardHeader/>
-        </Card>
+        <div>
+          {listOfGames}
+        </div>
       </MuiThemeProvider>
     );
   }
