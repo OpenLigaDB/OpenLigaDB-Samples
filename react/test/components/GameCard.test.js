@@ -65,4 +65,26 @@ describe('GameCard',() => {
 
   });
 
+  describe('render function', function(){
+
+    let wrapper;
+
+    before(() => {
+      wrapper = shallow(<GameCard/>);
+    });
+
+    it('must render a <MuiThemeProvider>',() => {
+      expect(wrapper.find('MuiThemeProvider')).to.have.length(1);
+    });
+
+    it('must render a <Card>',() => {
+      expect(wrapper.find('MuiThemeProvider').find('Card')).to.have.length(1);
+    });
+
+    it('must render a <CardHeader>',() => {
+      expect(wrapper.find('Card').find('CardHeader')).to.have.length(1);
+    });
+
+  });
+
 });

@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 export default class GameCard extends React.Component{
 
@@ -38,7 +40,11 @@ export default class GameCard extends React.Component{
 
   render(){
     return(
-      <div></div>
+      <MuiThemeProvider>
+        <Card>
+          <CardHeader/>
+        </Card>
+      </MuiThemeProvider>
     );
   }
 }
