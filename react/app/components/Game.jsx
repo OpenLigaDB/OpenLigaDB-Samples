@@ -1,8 +1,22 @@
 import React from 'react'
+import {Card, CardText} from 'material-ui/Card';
 
-const Game = () => {
+const Game = ({homeiconsrc, guesticonsrc}) => {
   return (
-    <div></div>
+    <div>
+      <Card>
+        <CardText>
+          <img
+            id='homeicon'
+            src={homeiconsrc}
+          />
+          <img
+            id='guesticon'
+            src={guesticonsrc}
+          />
+        </CardText>
+      </Card>
+    </div>
   );
 }
 

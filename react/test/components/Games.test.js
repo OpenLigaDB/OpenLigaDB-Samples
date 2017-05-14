@@ -8,7 +8,7 @@ import Games from '../../app/components/Games.jsx';
 
 describe('Games',() => {
 
-  it('must have a default state value null for ´game`',() => {
+  it('must have [] as default value for state.games',() => {
     const wrapper = shallow(<Games />);
     expect(wrapper.state().games).to.have.length(0);
   });
@@ -25,7 +25,7 @@ describe('Games',() => {
   			spyForAPICall.restore();
   		});
 
-    it('must call ´axios.get()´ with prop.url',() => {
+    it('must call ´axios.get()´ with props.url',() => {
     			let spyForAxiosCall = sinon.spy(axios, 'get');
 
     			const wrapper = mount(<Games url="validUrl"/>);
@@ -80,14 +80,36 @@ describe('Games',() => {
       expect(wrapper.find('MuiThemeProvider')).to.have.length(1);
     });
 
-    it('must render as much <Game> elemts as gmes are available',() => {
-      const multipleGames = require('../testUtils/multipleStubResponse.json');
+    describe('must render as much <Game> elements as games are available',() => {
 
-      wrapper.setState({
-        games: multipleGames
+      it('for 0 games',() => {
+        wrapper.setState({
+          games: []
+        });
+
+        expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(0);
       });
 
-      expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(3);
+      it('for 1 game',() => {
+        const oneGameStub = require('../testUtils/validStubResponse.json');
+
+        wrapper.setState({
+          games: oneGameStub
+        });
+
+        expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(1);
+      });
+
+      it('for 3 games',() => {
+        const multipleGamesStub = require('../testUtils/multipleStubResponse.json');
+
+        wrapper.setState({
+          games: multipleGamesStub
+        });
+
+        expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(3);
+      });
+
     });
 
   });
