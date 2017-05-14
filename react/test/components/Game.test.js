@@ -72,4 +72,63 @@ describe('The <Game> component',() => {
 
   });
 
+  describe('Must display goals of hometeam',() => {
+
+    it('Must render the hometeam goals',() => {
+      expect(wrapper.find('h3#hometeamgoals')).to.have.length(1);
+    });
+
+    describe('hometeamgoals must have value of props.hometeamgoals',() => {
+
+      it('goals must be displayed if game is finished',() => {
+        const testProps = {
+          isGameFinished: true,
+          hometeamgoals: 99
+        }
+        wrapper = shallow(<Game {...testProps}/>);
+        expect(wrapper.find('h3#hometeamgoals').text()).to.equal('99');
+      });
+
+      it('no goals must be displayed if game is not finished',() => {
+        const testProps = {
+          isGameFinished: false,
+          hometeamgoals: 13
+        }
+        wrapper = shallow(<Game {...testProps}/>);
+        expect(wrapper.find('h3#hometeamgoals').text()).to.equal('-');
+      });
+
+    });
+
+  });
+
+  describe('Must display goals of guestteam',() => {
+
+    it('Must render the guestteam goals',() => {
+      expect(wrapper.find('h3#guestteamgoals')).to.have.length(1);
+    });
+
+    describe('guestteamgoals must have value of props.guestteamgoals',() => {
+
+      it('goals must be displayed if game is finished',() => {
+        const testProps = {
+          isGameFinished: true,
+          guestteamgoals: 7
+        }
+        wrapper = shallow(<Game {...testProps}/>);
+        expect(wrapper.find('h3#guestteamgoals').text()).to.equal('7');
+      });
+
+      it('no goals must be displayed if game is not finished',() => {
+        const testProps = {
+          isGameFinished: false,
+          guestteamgoals: 7
+        }
+        wrapper = shallow(<Game {...testProps}/>);
+        expect(wrapper.find('h3#guestteamgoals').text()).to.equal('-');
+      });
+
+    });
+  });
+
 });

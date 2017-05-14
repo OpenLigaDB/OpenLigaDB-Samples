@@ -96,6 +96,24 @@ describe('Games',() => {
 
       });
 
+      it('must render prop isGameFinished to <Game> component',() => {
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('isGameFinished')).to.equal(true);
+        });
+      });
+
+      it('must render prop hometeamgoals to <Game> component',() => {
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('hometeamgoals')).to.equal(2);
+        });
+      });
+
+      it('must render prop guestteamgoals to <Game> component',() => {
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('guestteamgoals')).to.equal(3);
+        });
+      });
+
     });
 
     it('must not update the state.game if API call was not successfull',() => {

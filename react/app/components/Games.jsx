@@ -41,7 +41,10 @@ export default class Games extends React.Component{
           homeiconsrc: game.Team1.TeamIconUrl,
           guesticonsrc: game.Team2.TeamIconUrl,
           hometeamname: game.Team1.TeamName,
-          guestteamname: game.Team2.TeamName
+          guestteamname: game.Team2.TeamName,
+          isGameFinished: game.MatchIsFinished,
+          hometeamgoals: game.MatchResults[1].PointsTeam1,
+          guestteamgoals: game.MatchResults[1].PointsTeam2
     		}
 
       return (
