@@ -46,4 +46,30 @@ describe('The <Game> component',() => {
 
   });
 
+  describe('Must display name of hometeam',() => {
+
+    it('Must render the name of the hometeam',() => {
+      expect(wrapper.find('p#hometeamname')).to.have.length(1);
+    });
+
+    it('hometeamname must have text of props.hometeamname',() => {
+      wrapper = shallow(<Game hometeamname='Team01'/>);
+      expect(wrapper.find('p#hometeamname').text()).to.equal('Team01');
+    });
+
+  });
+
+  describe('Must display name of guestteam',() => {
+
+    it('Must render the name of the guestteam',() => {
+      expect(wrapper.find('p#guestteamname')).to.have.length(1);
+    });
+
+    it('guestteamname must have text of props.guestteamname',() => {
+      wrapper = shallow(<Game guestteamname='Whatever'/>);
+      expect(wrapper.find('p#guestteamname').text()).to.equal('Whatever');
+    });
+
+  });
+
 });

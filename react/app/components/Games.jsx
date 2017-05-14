@@ -37,7 +37,11 @@ export default class Games extends React.Component{
     const listOfGames = this.state.games.map((game, index) => {
 
       const props = {
-    			key: game.MatchID
+    			key: game.MatchID,
+          homeiconsrc: game.Team1.TeamIconUrl,
+          guesticonsrc: game.Team2.TeamIconUrl,
+          hometeamname: game.Team1.TeamName,
+          guestteamname: game.Team2.TeamName
     		}
 
       return (

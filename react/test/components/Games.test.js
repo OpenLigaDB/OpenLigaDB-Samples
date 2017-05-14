@@ -35,21 +35,67 @@ describe('Games',() => {
     			spyForAxiosCall.restore();
     });
 
-    it('must update the state.game if API call was successfull',() => {
-      const mock = new MockAdapter(axios);
-      const stubResponse = require('../testUtils/validStubResponse.json');
+    describe('when API call successful',() => {
 
-      mock.onGet('validUrl').reply(200, stubResponse);
+      let mock,
+          stubResponse,
+          wrapper;
 
-      const wrapper = mount(<Games url="validUrl"/>);
+      before(() => {
+        mock = new MockAdapter(axios);
+        stubResponse = require('../testUtils/validStubResponse.json');
 
-      return wrapper.instance().fetchAllGames().then(resp => {
-        expect(resp.data).not.to.be.null;
-        expect(resp.data).not.to.be.undefined;
-        expect(wrapper.state().games).to.equal(resp.data);
+        mock.onGet('validUrl').reply(200, stubResponse);
+
+        wrapper = mount(<Games url="validUrl"/>);
       });
 
-      mock.restore();
+      after(() => {
+        mock.restore();
+      });
+
+      it('must update the state.game if API call was successfull',() => {
+
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(resp.data).not.to.be.null;
+          expect(resp.data).not.to.be.undefined;
+          expect(wrapper.state().games).to.equal(resp.data);
+        });
+
+      });
+
+      it('must render prop homeiconsrc to <Game> component',() => {
+
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('homeiconsrc')).to.equal("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Chemnitzer_FC_Logo.svg/200px-Chemnitzer_FC_Logo.svg.png");
+        });
+
+      });
+
+      it('must render prop guesticonsrc to <Game> component',() => {
+
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('guesticonsrc')).to.equal("http://www.openligadb.de/images/teamicons/MSV_Duisburg.gif");
+        });
+
+      });
+
+      it('must render prop hometeamname to <Game> component',() => {
+
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('hometeamname')).to.equal("Chemnitzer FC");
+        });
+
+      });
+
+      it('must render prop guestteamname to <Game> component',() => {
+
+        return wrapper.instance().fetchAllGames().then(resp => {
+          expect(wrapper.find('Game').at(0).prop('guestteamname')).to.equal("MSV Duisburg");
+        });
+
+      });
+
     });
 
     it('must not update the state.game if API call was not successfull',() => {

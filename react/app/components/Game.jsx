@@ -1,7 +1,15 @@
 import React from 'react'
 import {Card, CardText} from 'material-ui/Card';
 
-const Game = ({homeiconsrc, guesticonsrc}) => {
+const Game = (props) => {
+
+  const {
+    homeiconsrc,
+    guesticonsrc,
+    hometeamname,
+    guestteamname
+  } = props;
+
   return (
     <div>
       <Card>
@@ -14,6 +22,8 @@ const Game = ({homeiconsrc, guesticonsrc}) => {
             id='guesticon'
             src={guesticonsrc}
           />
+          <p id='hometeamname'>{hometeamname}</p>
+          <p id='guestteamname'>{guestteamname}</p>
         </CardText>
       </Card>
     </div>
