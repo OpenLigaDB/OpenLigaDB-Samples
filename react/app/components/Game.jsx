@@ -13,36 +13,51 @@ const Game = (props) => {
     guestteamgoals
   } = props;
 
-  const imgStyle = {
-    height: '75px',
+  const style = {
+    imgStyle: {
+      height: '75px',
+      padding: '10px'
+    },
+    imgDiv: {
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    nameDiv: {
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '20px'
+    }
   };
 
-  let homeGoals = '-';
-  let guestGoals = '-'
-
-  if(isGameFinished){
-    homeGoals = hometeamgoals;
-    guestGoals = guestteamgoals;
-  }
+  let homeGoals = isGameFinished ? hometeamgoals : '-';
+  let guestGoals = isGameFinished ? guestteamgoals : '-';
 
   return (
-    <div>
+    <div style={{width: 400}}>
       <Card>
         <CardText>
-          <img
-            id='homeicon'
-            src={homeiconsrc}
-            style={imgStyle}
-          />
-          <img
-            id='guesticon'
-            src={guesticonsrc}
-            style={imgStyle}
-          />
-          <p id='hometeamname'>{hometeamname}</p>
-          <h3 id='hometeamgoals'>{homeGoals}</h3>
-          <p id='guestteamname'>{guestteamname}</p>
-          <h3 id='guestteamgoals'>{guestGoals}</h3>
+          <div style={style.imgDiv}>
+            <img
+              id='homeicon'
+              src={homeiconsrc}
+              style={style.imgStyle}
+            />
+            <img
+              id='guesticon'
+              src={guesticonsrc}
+              style={style.imgStyle}
+            />
+          </div>
+          <div style={style.imgDiv}>
+            <p id='hometeamname'>{hometeamname}</p>
+            <p style={{width: 25, textAlign: 'center'}}> : </p>
+            <p id='guestteamname'>{guestteamname}</p>
+          </div>
+          <div style={style.imgDiv}>
+            <h1 id='hometeamgoals'>{homeGoals}</h1>
+            <p style={{width: 75}}></p>
+            <h1 id='guestteamgoals'>{guestGoals}</h1>
+          </div>
         </CardText>
       </Card>
     </div>

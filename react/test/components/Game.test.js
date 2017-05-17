@@ -49,12 +49,12 @@ describe('The <Game> component',() => {
   describe('Must display name of hometeam',() => {
 
     it('Must render the name of the hometeam',() => {
-      expect(wrapper.find('p#hometeamname')).to.have.length(1);
+      expect(wrapper.find('#hometeamname')).to.have.length(1);
     });
 
     it('hometeamname must have text of props.hometeamname',() => {
       wrapper = shallow(<Game hometeamname='Team01'/>);
-      expect(wrapper.find('p#hometeamname').text()).to.equal('Team01');
+      expect(wrapper.find('#hometeamname').text()).to.equal('Team01');
     });
 
   });
@@ -62,12 +62,12 @@ describe('The <Game> component',() => {
   describe('Must display name of guestteam',() => {
 
     it('Must render the name of the guestteam',() => {
-      expect(wrapper.find('p#guestteamname')).to.have.length(1);
+      expect(wrapper.find('#guestteamname')).to.have.length(1);
     });
 
     it('guestteamname must have text of props.guestteamname',() => {
       wrapper = shallow(<Game guestteamname='Whatever'/>);
-      expect(wrapper.find('p#guestteamname').text()).to.equal('Whatever');
+      expect(wrapper.find('#guestteamname').text()).to.equal('Whatever');
     });
 
   });
@@ -75,7 +75,7 @@ describe('The <Game> component',() => {
   describe('Must display goals of hometeam',() => {
 
     it('Must render the hometeam goals',() => {
-      expect(wrapper.find('h3#hometeamgoals')).to.have.length(1);
+      expect(wrapper.find('#hometeamgoals')).to.have.length(1);
     });
 
     describe('hometeamgoals must have value of props.hometeamgoals',() => {
@@ -86,7 +86,7 @@ describe('The <Game> component',() => {
           hometeamgoals: 99
         }
         wrapper = shallow(<Game {...testProps}/>);
-        expect(wrapper.find('h3#hometeamgoals').text()).to.equal('99');
+        expect(wrapper.find('#hometeamgoals').text()).to.equal('99');
       });
 
       it('no goals must be displayed if game is not finished',() => {
@@ -95,7 +95,7 @@ describe('The <Game> component',() => {
           hometeamgoals: 13
         }
         wrapper = shallow(<Game {...testProps}/>);
-        expect(wrapper.find('h3#hometeamgoals').text()).to.equal('-');
+        expect(wrapper.find('#hometeamgoals').text()).to.equal('-');
       });
 
     });
@@ -105,7 +105,7 @@ describe('The <Game> component',() => {
   describe('Must display goals of guestteam',() => {
 
     it('Must render the guestteam goals',() => {
-      expect(wrapper.find('h3#guestteamgoals')).to.have.length(1);
+      expect(wrapper.find('#guestteamgoals')).to.have.length(1);
     });
 
     describe('guestteamgoals must have value of props.guestteamgoals',() => {
@@ -116,7 +116,7 @@ describe('The <Game> component',() => {
           guestteamgoals: 7
         }
         wrapper = shallow(<Game {...testProps}/>);
-        expect(wrapper.find('h3#guestteamgoals').text()).to.equal('7');
+        expect(wrapper.find('#guestteamgoals').text()).to.equal('7');
       });
 
       it('no goals must be displayed if game is not finished',() => {
@@ -125,7 +125,7 @@ describe('The <Game> component',() => {
           guestteamgoals: 7
         }
         wrapper = shallow(<Game {...testProps}/>);
-        expect(wrapper.find('h3#guestteamgoals').text()).to.equal('-');
+        expect(wrapper.find('#guestteamgoals').text()).to.equal('-');
       });
 
     });
