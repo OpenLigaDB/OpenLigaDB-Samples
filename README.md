@@ -93,8 +93,9 @@ Alle Teams einer Liga:
 Die Spiele, bei welchen die als Parameter übergebenen Teams gegeneinander spielten:
 > [https://www.openligadb.de/api/getmatchdata/40/7](https://www.openligadb.de/api/getmatchdata/40/7)
 
-
-
+---
+Die Torschützen der übergebenen Liga:
+> [https://www.openligadb.de/api/getgoalgetters/bl1/2017](https://www.openligadb.de/api/getgoalgetters/bl1/2017)
 
 
 
