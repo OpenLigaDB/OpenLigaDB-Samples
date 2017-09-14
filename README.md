@@ -89,9 +89,9 @@ Alle Teams einer Liga:
 > [https://www.openligadb.de/api/getavailableteams/bl1/2016](https://www.openligadb.de/api/getavailableteams/bl1/2016)
 
 
-
-
-ds
+---
+Die Spiele, bei welchen die als Parameter übergebenen Teams gegeneinander spielten:
+> [https://www.openligadb.de/api/getmatchdata/40/7](https://www.openligadb.de/api/getmatchdata/40/7)
 
 
 
