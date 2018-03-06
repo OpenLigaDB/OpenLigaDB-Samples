@@ -98,6 +98,9 @@ Die Torschützen der übergebenen Liga:
 > [https://www.openligadb.de/api/getgoalgetters/bl1/2017](https://www.openligadb.de/api/getgoalgetters/bl1/2017)
 
 
+---
+Die Tabelle ersten Bundesliga 2017/2018
+> [https://www.openligadb.de/api/getbltable/bl1/2017](https://www.openligadb.de/api/getbltable/bl1/2017)
 
 
 
