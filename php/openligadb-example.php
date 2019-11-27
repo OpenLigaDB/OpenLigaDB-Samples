@@ -12,7 +12,7 @@ if (!empty($_GET["spieltag"])) {
 }
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://www.openligadb.de/api/getmatchdata/bl1/2016/" . (string)$current);
+curl_setopt($ch, CURLOPT_URL, "https://www.openligadb.de/api/getmatchdata/bl1/2016/" . (string)$current);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 $output = curl_exec($ch);
@@ -68,8 +68,8 @@ $matches = json_decode($output, true);
             ?>
             <tr>
                 <td><?php echo $match["MatchDateTime"]; ?></td>
-                <td><?php echo $match["Team2"]["TeamName"]; ?></td>
                 <td><?php echo $match["Team1"]["TeamName"]; ?></td>
+                <td><?php echo $match["Team2"]["TeamName"]; ?></td>
             </tr>
             <?php
         }
