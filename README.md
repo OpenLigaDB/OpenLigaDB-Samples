@@ -68,7 +68,7 @@ Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spi
 
 
 ---
-Eine Liste der Spiel-Einteilungen (Spieltag, Vorrunde, Finale, ...) der als Parameter zu übergebenden Liga + Saison zurueck
+Eine Liste der Spiel-Einteilungen (Spieltag, Vorrunde, Finale, ...) der als Parameter zu übergebenden Liga + Saison
 > [https://www.openligadb.de/api/getavailablegroups/bl1/2016](https://www.openligadb.de/api/getavailablegroups/bl1/2016)
 
 ---
