@@ -39,63 +39,63 @@ Nachfolgend wird das Api-Schema anhand von Beispielen dargestellt:
 
 ---
 Spiele des aktuellen Spieltages der ersten Bundesliga:
-> [https://www.openligadb.de/api/getmatchdata/bl1](https://www.openligadb.de/api/getmatchdata/bl1)
+> [https://api.openligadb.de/getmatchdata/bl1](https://api.openligadb.de/getmatchdata/bl1)
 
 Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
 
 ---
-Spiele des 8. Spieltages der ersten Bundesliga 2016/2017:
-> [https://www.openligadb.de/api/getmatchdata/bl1/2016/8](https://www.openligadb.de/api/getmatchdata/bl1/2016/8)
+Spiele des 8. Spieltages der ersten Bundesliga 2022/2023:
+> [https://api.openligadb.de/getmatchdata/bl1/2022/8](https://api.openligadb.de/getmatchdata/bl1/2022/8)
 
 ---
-Alle Spiele der ersten Bundesliga 2016/2017:
-> [https://www.openligadb.de/api/getmatchdata/bl1/2016](https://www.openligadb.de/api/getmatchdata/bl1/2016)
+Alle Spiele der ersten Bundesliga 2022/2023:
+> [https://api.openligadb.de/getmatchdata/bl1/2022](https://api.openligadb.de/getmatchdata/bl1/2022)
 
 ---
 Spiel mit der Id 39738:
-> [https://www.openligadb.de/api/getmatchdata/39738](https://www.openligadb.de/api/getmatchdata/39738)
+> [https://api.openligadb.de/getmatchdata/39738](https://api.openligadb.de/getmatchdata/39738)
 
 ---
 Die aktuelle Group (entspricht z.B. bei der Fussball-Bundesliga dem 'Spieltag') des als Parameter zu übergebenden leagueShortcuts (z.B. 'bl1'):
-> [https://www.openligadb.de/api/getcurrentgroup/bl1](https://www.openligadb.de/api/getcurrentgroup/bl1)
+> [https://api.openligadb.de/getcurrentgroup/bl1](https://api.openligadb.de/getcurrentgroup/bl1)
 
 Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
 
 
 ---
 Eine Liste der Spiel-Einteilungen (Spieltag, Vorrunde, Finale, ...) der als Parameter zu übergebenden Liga + Saison
-> [https://www.openligadb.de/api/getavailablegroups/bl1/2016](https://www.openligadb.de/api/getavailablegroups/bl1/2016)
+> [https://api.openligadb.de/getavailablegroups/bl1/2022](https://api.openligadb.de/getavailablegroups/bl1/2022)
 
 ---
-Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2016/2017.
-> [https://www.openligadb.de/api/getlastchangedate/bl1/2016/8](https://www.openligadb.de/api/getlastchangedate/bl1/2016/8)
+Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2022/2023.
+> [https://api.openligadb.de/getlastchangedate/bl1/2022/8](https://api.openligadb.de/getlastchangedate/bl1/2022/8)
 
 Diese Methode dient zur Ermittlung der Änderung von Spieldaten, um unnötiges Pollen der o.g. Service-Methoden zu vermeiden.
 
 ---
 Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenfalls zu übergebenen Liga:
-> [https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7](https://www.openligadb.de/api/getnextmatchbyleagueteam/3005/7)
+> [https://api.openligadb.de/getnextmatchbyleagueteam/3005/7](https://api.openligadb.de/getnextmatchbyleagueteam/3005/7)
 
 - '3005' entspricht der LeagueId der 1. Fußball Bundesliga 2016/2017
 - '7' entspricht der TeamId von Borussia Dortmund
 
 ---
 Alle Teams einer Liga:
-> [https://www.openligadb.de/api/getavailableteams/bl1/2016](https://www.openligadb.de/api/getavailableteams/bl1/2016)
+> [https://api.openligadb.de/getavailableteams/bl1/2022](https://api.openligadb.de/getavailableteams/bl1/2022)
 
 
 ---
 Die Spiele, bei welchen die als Parameter übergebenen Teams gegeneinander spielten:
-> [https://www.openligadb.de/api/getmatchdata/40/7](https://www.openligadb.de/api/getmatchdata/40/7)
+> [https://api.openligadb.de/getmatchdata/40/7](https://api.openligadb.de/getmatchdata/40/7)
 
 ---
 Die Torschützen der übergebenen Liga:
-> [https://www.openligadb.de/api/getgoalgetters/bl1/2017](https://www.openligadb.de/api/getgoalgetters/bl1/2017)
+> [https://api.openligadb.de/getgoalgetters/bl1/2022](https://api.openligadb.de/getgoalgetters/bl1/2022)
 
 
 ---
-Die Tabelle ersten Bundesliga 2017/2018
-> [https://www.openligadb.de/api/getbltable/bl1/2017](https://www.openligadb.de/api/getbltable/bl1/2017)
+Die Tabelle ersten Bundesliga 2022/2023
+> [https://api.openligadb.de/getbltable/bl1/2022](https://api.openligadb.de/getbltable/bl1/2022)
 
 
 
