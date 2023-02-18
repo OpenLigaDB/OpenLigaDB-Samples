@@ -11,8 +11,6 @@ Der Abruf der Daten per JSON-Api erfolgt dann je nach Detailtiefe dem Schema
 
 > https://api.openligadb.de/getmatchdata/LeagueShortcut/LeagueSeason/GroupOrderId
 
-Der Server liefert je nach Accept-Header JSON oder XML zurück (Stichwort [Content Negotiation](https://weblog.west-wind.com/posts/2012/aug/21/an-introduction-to-aspnet-web-api#ContentNegotiation))
-
 ### Berechtigungen
 Jeder angemeldete User darf Ligen anlegen, ist dann der "Administrator" seiner Ligen und nur dieser darf Teams und Spielansetzungen hinzufügen sowie die Ergebnistypen für seine Ligen festlegen. 
 
