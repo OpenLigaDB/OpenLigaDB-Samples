@@ -11,6 +11,8 @@ Der Abruf der Daten per JSON-Api erfolgt dann je nach Detailtiefe dem Schema
 
 > https://api.openligadb.de/getmatchdata/LeagueShortcut/LeagueSeason/GroupOrderId
 
+Eine Swagger-Online-Dokumentation der Api gibt es unter https://api.openligadb.de/
+
 ### Berechtigungen
 Jeder angemeldete User darf Ligen anlegen, ist dann der "Administrator" seiner Ligen und nur dieser darf Teams und Spielansetzungen hinzufügen sowie die Ergebnistypen für seine Ligen festlegen. 
 
