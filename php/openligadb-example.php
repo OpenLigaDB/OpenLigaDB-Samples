@@ -52,7 +52,7 @@ $matches = json_decode($output, true);
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <label for="spieltag">Spieltag:</label>
         <input class="<?php echo $error === true ? "error" : ""; ?>" type="text" id="spieltag" name="spieltag"/>
-        <button type="submit">Lade Spieltag (Saison 2016/2017)</button>
+        <button type="submit">Lade Spieltag (Saison 2022/2023)</button>
     </form>
     <table>
         <thead>
