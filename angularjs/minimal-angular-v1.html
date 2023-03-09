@@ -36,9 +36,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="match in matches">
-          <td>{{ match.MatchDateTime}}</td>
-          <td>{{ match.Team1.TeamName}}</td>
-          <td>{{ match.Team2.TeamName}}</td>
+          <td>{{ match.matchDateTime}}</td>
+          <td>{{ match.team1.teamName}}</td>
+          <td>{{ match.team2.teamName}}</td>
         </tr>
       </tbody>
     </table>
@@ -57,7 +57,7 @@
       $scope.ladeDaten = function() {
         $http({
           method: 'Get',
-          url: "http://www.openligadb.de/api/getmatchdata/bl1/2016/" + $scope.spieltag
+          url: "http://api.openligadb.de/getmatchdata/bl1/2016/" + $scope.spieltag
         }).
         success(function(data, status) {
           $scope.matches = data;

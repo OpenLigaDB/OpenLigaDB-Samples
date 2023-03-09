@@ -37,12 +37,12 @@
       </thead>
       <tbody>
         <tr ng-repeat="match in matches">
-          <td>{{ match.MatchDateTime}}</td>
-          <td>{{ match.Team1.TeamName}}</td>
-          <td>{{ match.Team2.TeamName}}</td>
+          <td>{{ match.matchDateTime}}</td>
+          <td>{{ match.team1.teamName}}</td>
+          <td>{{ match.team2.teamName}}</td>
           <td>
-                <div ng-repeat="result in match.MatchResults  | orderBy:'ResultOrderID'">
-                  {{ result.ResultName}}: <strong>{{ result.PointsTeam1}}:{{ result.PointsTeam2}}</strong>
+                <div ng-repeat="result in match.matchResults  | orderBy:'ResultOrderID'">
+                  {{ result.resultName}}: <strong>{{ result.pointsTeam1}}:{{ result.pointsTeam2}}</strong>
                 </div>
           </td>
         </tr>
@@ -63,7 +63,7 @@
       $scope.ladeDaten = function() {
         $http({
           method: 'Get',
-          url: "https://www.openligadb.de/api/getmatchdata/bl1/2016/" + $scope.spieltag
+          url: "https://api.openligadb.de/getmatchdata/bl1/2022/" + $scope.spieltag
         }).
         success(function(data, status) {
           $scope.matches = data;

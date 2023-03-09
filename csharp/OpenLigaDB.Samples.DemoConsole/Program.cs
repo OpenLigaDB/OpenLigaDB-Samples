@@ -18,7 +18,7 @@ namespace OpenLigaDB.Samples.DemoConsole
 
         static async Task RunAsync()
         {
-            client.BaseAddress = new Uri("https://www.openligadb.de/");
+            client.BaseAddress = new Uri("https://api.openligadb.de/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -26,7 +26,7 @@ namespace OpenLigaDB.Samples.DemoConsole
             {
                 try
                 {
-                    var matches = await GetMatchesAsync("api/getmatchdata/bl1/2016/11");
+                    var matches = await GetMatchesAsync("getmatchdata/bl1/2022/11");
 
                     foreach (var match in matches)
                     {
@@ -43,9 +43,6 @@ namespace OpenLigaDB.Samples.DemoConsole
                 }
 
             } while (true);
-
-
-            Console.ReadLine();
         }
 
         static async Task<List<Match>> GetMatchesAsync(string path)
