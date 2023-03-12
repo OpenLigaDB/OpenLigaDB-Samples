@@ -3,23 +3,38 @@ $matchCount = 34;
 $current = 1;
 $error = false;
 
+// Check and assign the current game day
 if (!empty($_GET["spieltag"])) {
-    if ($_GET["spieltag"] > 0 && $_GET["spieltag"] <= $matchCount) {
-        $current = $_GET["spieltag"];
+    $spieltag = (int) $_GET["spieltag"];
+    if ($spieltag > 0 && $spieltag <= $matchCount) {
+        $current = $spieltag;
     } else {
         $error = true;
     }
 }
 
+// Retrieve the data for the current matchday from the OpenLigaDB API
+$url = sprintf("https://api.openligadb.de/getmatchdata/bl1/2022/%d", $current);
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.openligadb.de/getmatchdata/bl1/2022/" . (string)$current);
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 $output = curl_exec($ch);
+
+if ($output === false) {
+    die("Error when requesting the API: " . curl_error($ch));
+}
+
 curl_close($ch);
 
+// Decoding the API response
 $matches = json_decode($output, true);
-?><!DOCTYPE html>
+
+if ($matches === null) {
+    die("Error processing API response: " . json_last_error_msg());
+}
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8"/>
