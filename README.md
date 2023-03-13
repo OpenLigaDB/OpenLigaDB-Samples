@@ -1,4 +1,4 @@
-# Dokumentation zur OpenligaDB und zu deren Api
+# Dokumentation zur OpenligaDB und deren Api
 
 ## Allgemeines
 
