@@ -134,6 +134,9 @@ Das Match-Objekt enthält alle für ein Spiel relevanten Daten wie der
       ]
     ```
     Die Reihenfolge der Array-Elemente entspricht der deklarierten OrderId, welche auch in *resultOrderID* im Api-Objekt mit ausgegeben wird. Wird eine neue Liga angelegt sollte die Reihenfolge der Ergebnistypen (und damit der OrderId) der im Spiel auftretenden logischen Abfolge entsprechen.
+
+    Weiterhin sollte in den Liga-Einstellungen zu jedem Ergebnis der Liga-übergreifendende *Ergebnistyp* festgelegt werden. Dieser ermöglicht es, in jeder Liga der OpenLigaDB beispielsweise nach der *resultTypeID == 1* zu filtern und damit immer das Halbzeitergebnis zu ermitteln.
+    So erfolgt auch basierend auf der *resultTypeID == 2* die Berechnung der Punkte für die Bundesliga-Tabelle. 
 - *goals* - die gefallenen Tore
 - und einiges mehr - siehe  https://api.openligadb.de/ unter "Schemas"
 
