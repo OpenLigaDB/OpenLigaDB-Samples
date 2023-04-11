@@ -111,28 +111,28 @@ Das Match-Objekt enthält alle für ein Spiel relevanten Daten wie der
 - *matchResults* - enthält die Ergebnisse des Spiels in Form eines Arrays von *MatchResult*
     - Dieses Array enthält die in den Liga-Einstellungen definierten Ergebnisse des Spiels. So führt folgende Deklaration zu nachfolgendem MatchResults-Array:
      ![image](https://user-images.githubusercontent.com/7813965/231270437-2768b27d-2940-4d7b-90ab-303bd9521e6d.png)
-    ```json
-    "matchResults": [
-        {
-            "resultID": 98331,
-            "resultName": "Halbzeitergebnis",
-            "pointsTeam1": 0,
-            "pointsTeam2": 1,
-            "resultOrderID": 1,
-            "resultTypeID": 1,
-            "resultDescription": "Ergebnis nach Ende der 1. Halbzeit"
-        },
-        {
-            "resultID": 98330,
-            "resultName": "Endergebnis",
-            "pointsTeam1": 0,
-            "pointsTeam2": 2,
-            "resultOrderID": 2,
-            "resultTypeID": 2,
-            "resultDescription": "Ergebnis nach Ende des Spiels"
-        }
-      ]
-    ```
+        ```json
+        "matchResults": [
+            {
+                "resultID": 98331,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 0,
+                "pointsTeam2": 1,
+                "resultOrderID": 1,
+                "resultTypeID": 1,
+                "resultDescription": "Ergebnis nach Ende der 1. Halbzeit"
+            },
+            {
+                "resultID": 98330,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 0,
+                "pointsTeam2": 2,
+                "resultOrderID": 2,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende des Spiels"
+            }
+          ]
+        ```
     Die Reihenfolge der Array-Elemente entspricht der deklarierten OrderId, welche auch in *resultOrderID* im Api-Objekt mit ausgegeben wird. Wird eine neue Liga angelegt sollte die Reihenfolge der Ergebnistypen (und damit der OrderId) der im Spiel auftretenden logischen Abfolge entsprechen.
 
     Weiterhin sollte in den Liga-Einstellungen zu jedem Ergebnis der Liga-übergreifendende *Ergebnistyp* festgelegt werden. Dieser ermöglicht es, in jeder Liga der OpenLigaDB beispielsweise nach der *resultTypeID == 1* zu filtern und damit immer das Halbzeitergebnis zu ermitteln.
