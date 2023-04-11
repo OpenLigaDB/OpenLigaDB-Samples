@@ -133,7 +133,7 @@ Das Match-Objekt enthält alle für ein Spiel relevanten Daten wie der
         }
       ]
     ```
-    Die Reihenfolge der Array-Elemente entspricht der deklarierten OrderId, welche auch in *resultOrderID* im Api-Objetkt mit ausgegeben wird.
+    Die Reihenfolge der Array-Elemente entspricht der deklarierten OrderId, welche auch in *resultOrderID* im Api-Objekt mit ausgegeben wird. Wird eine neue Liga angelegt sollte die Reihenfolge der Ergebnistypen (und damit der OrderId) der im Spiel auftretenden logischen Abfolge entsprechen.
 - *goals* - die gefallenen Tore
 - und einiges mehr - siehe  https://api.openligadb.de/ unter "Schemas"
 
