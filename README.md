@@ -110,7 +110,8 @@ Das Match-Objekt enthält alle für ein Spiel relevanten Daten wie der
 - *matchIdFinished* - Information, ob das Spiel beendet ist
 - *matchResults* - enthält die Ergebnisse des Spiels in Form eines Arrays von *MatchResult*
     - Dieses Array enthält die in den Liga-Einstellungen definierten Ergebnisse des Spiels:
-     
+     ![image](https://user-images.githubusercontent.com/7813965/231270437-2768b27d-2940-4d7b-90ab-303bd9521e6d.png)
+
 
 - *goals* - die gefallenen Tore
 - und einiges mehr - siehe  https://api.openligadb.de/ unter "Schemas"
