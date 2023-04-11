@@ -35,7 +35,6 @@ dritte Bundesliga stets den LeaguShortcut "bl1", "bl2" und "bl3". Der Parameter 
 die aktuelle Saison. Leider ist das z.B. bei der Champions League oder beim DFB-Pokal nicht so eindeutig
 angelegt worden.
 
-
 ## Api-Schema
 Nachfolgend wird das Api-Schema anhand von Beispielen dargestellt:
 
@@ -100,7 +99,20 @@ Die Tabelle ersten Bundesliga 2022/2023
 > [https://api.openligadb.de/getbltable/bl1/2022](https://api.openligadb.de/getbltable/bl1/2022)
 
 
+## Api-Rückgabetypen
 
+### Match
+Das Match-Objekt enthält alle für ein Spiel relevanten Daten wie der 
+- *matchID* - eine eindeutige Spiel-ID 
+- *matchDateTime* - der Startzeitpunkt 
+- *team1* und *team2* - die beteiligten Teams
+- *leaugeId, leagueName, leagueSeason, leagueShortcut* - Informationen über die Liga
+- *matchIdFinished* - Information, ob das Spiel beendet ist
+- *matchResults* - enthält die Ergebnisse des Spiels in Form eines Arrays von *MatchResult*
+    - Dieses Array enthält die in den Liga-Einstellungen definierten Ergebnisse des Spiels:
+     
 
+- *goals* - die gefallenen Tore
+- und einiges mehr - siehe  https://api.openligadb.de/ unter "Schemas"
 
 
