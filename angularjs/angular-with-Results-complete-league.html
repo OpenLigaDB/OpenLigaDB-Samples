@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="oldbApp">
+
+<head>
+<meta charset="UTF-8" />
+    <title>OpenLigaDB - Minimal Angularjs-V1-Sample</title>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+    td{ padding: 3px 5px 3px 5px;}
+    table  {
+      margin-top: 30px;
+    }
+    
+  </style>
+</head>
+
+<body ng-controller="OldbCtrl">
+  <h1>{{ title }}</h1>
+<h2>Spielergebnisse, Tore und mehr unter <a href="http://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
+  
+  <div>
+    League:
+    <input type="text" ng-model="league" />
+    <button ng-click="ladeDaten()">Lade {{league}} (Saison 2023/2024)</button>
+    <table ng-show="matches.length > 0">
+      <thead>
+        <tr>
+          <th>Spieltag</th>
+          <th>Datum</th>
+          <th>Team1</th>
+          <th>Team2</th>
+          <th>Ergebnisse</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat="match in matches">
+          <td>{{ match.group.groupName}}</td>
+          <td>{{ match.matchDateTime}}</td>
+          <td>{{ match.team1.teamName}}</td>
+          <td>{{ match.team2.teamName}}</td>
+          <td>
+                <div ng-repeat="result in match.matchResults  | orderBy:'ResultOrderID'">
+                  {{ result.resultName}}: <strong>{{ result.pointsTeam1}}:{{ result.pointsTeam2}}</strong>
+                </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script type="text/javascript">
+    var oldbApp = angular.module('oldbApp', []);
+
+    oldbApp.controller('OldbCtrl', function($scope, $http) {
+      $scope.title = 'Fußballdaten per JavaScript abrufen!';
+      $scope.league = "bl1";
+      $scope.matches = [];
+
+      $scope.ladeDaten = function() {
+        $http({
+          method: 'Get',
+          url: "https://api.openligadb.de/getmatchdata/"+ $scope.league + "/2023/" 
+        }).
+        success(function(data, status) {
+          $scope.matches = data;
+        });
+      };
+
+    });
+  </script>
+
+
+</body>
+
+</html>
