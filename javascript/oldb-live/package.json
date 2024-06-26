@@ -1,0 +1,16 @@
+{
+  "name": "oldb-mqtt-beta.js",
+  "module": "index.ts",
+  "version": "0.2.6",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1",
+    "mqtt": "^5.6.2"
+  }
+}
