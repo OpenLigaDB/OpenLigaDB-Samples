@@ -36,15 +36,20 @@ export default class Games extends React.Component{
 
     const listOfGames = this.state.games.map((game, index) => {
 
+      // Das Endergebnis über die ligaübergreifende resultTypeID 2 ermitteln
+      // und nicht über die Position im matchResults-Array.
+      const finalResult = (game.matchResults || [])
+        .find(result => result.resultTypeID === 2);
+
       const props = {
-    			key: game.MatchID,
-          homeiconsrc: game.Team1.TeamIconUrl,
-          guesticonsrc: game.Team2.TeamIconUrl,
-          hometeamname: game.Team1.TeamName,
-          guestteamname: game.Team2.TeamName,
-          isGameFinished: game.MatchIsFinished,
-          hometeamgoals: game.MatchResults[1].PointsTeam1,
-          guestteamgoals: game.MatchResults[1].PointsTeam2
+    			key: game.matchID,
+          homeiconsrc: game.team1.teamIconUrl,
+          guesticonsrc: game.team2.teamIconUrl,
+          hometeamname: game.team1.teamName,
+          guestteamname: game.team2.teamName,
+          isGameFinished: game.matchIsFinished && finalResult !== undefined,
+          hometeamgoals: finalResult ? finalResult.pointsTeam1 : null,
+          guestteamgoals: finalResult ? finalResult.pointsTeam2 : null
     		}
 
       return (
