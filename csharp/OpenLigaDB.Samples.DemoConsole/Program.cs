@@ -26,7 +26,7 @@ namespace OpenLigaDB.Samples.DemoConsole
             {
                 try
                 {
-                    var matches = await GetMatchesAsync("getmatchdata/bl1/2022/11");
+                    var matches = await GetMatchesAsync("getmatchdata/bl1/2026/11");
 
                     foreach (var match in matches)
                     {

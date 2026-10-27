@@ -19,12 +19,12 @@
 
 <body ng-controller="OldbCtrl">
   <h1>{{ title }}</h1>
-<h2>Spielergebnisse, Tore und mehr unter <a href="http://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
+<h2>Spielergebnisse, Tore und mehr unter <a href="https://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
   
   <div>
     Spieltag:
     <input type="text" ng-model="spieltag" />
-    <button ng-click="ladeDaten()">Lade Spieltag {{spieltag}} (Saison 2022/2023)</button>
+    <button ng-click="ladeDaten()">Lade Spieltag {{spieltag}} (Saison 2026/2027)</button>
     <table ng-show="matches.length > 0">
       <thead>
         <tr>
@@ -63,7 +63,7 @@
       $scope.ladeDaten = function() {
         $http({
           method: 'Get',
-          url: "https://api.openligadb.de/getmatchdata/bl1/2022/" + $scope.spieltag
+          url: "https://api.openligadb.de/getmatchdata/bl1/2026/" + $scope.spieltag
         }).
         success(function(data, status) {
           $scope.matches = data;

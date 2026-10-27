@@ -45,12 +45,12 @@ Spiele des aktuellen Spieltages der ersten Bundesliga:
 Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spiel des letzten Spieltages und dem ersten Spiel des nächsten Spieltages erhöht.
 
 ---
-Spiele des 8. Spieltages der ersten Bundesliga 2022/2023:
-> [https://api.openligadb.de/getmatchdata/bl1/2022/8](https://api.openligadb.de/getmatchdata/bl1/2022/8)
+Spiele des 8. Spieltages der ersten Bundesliga 2026/2027:
+> [https://api.openligadb.de/getmatchdata/bl1/2026/8](https://api.openligadb.de/getmatchdata/bl1/2026/8)
 
 ---
-Alle Spiele der ersten Bundesliga 2022/2023:
-> [https://api.openligadb.de/getmatchdata/bl1/2022](https://api.openligadb.de/getmatchdata/bl1/2022)
+Alle Spiele der ersten Bundesliga 2026/2027:
+> [https://api.openligadb.de/getmatchdata/bl1/2026](https://api.openligadb.de/getmatchdata/bl1/2026)
 
 ---
 Spiel mit der Id 39738:
@@ -65,11 +65,11 @@ Der aktuelle Spieltag wird jeweils zur Hälfte der Zeit zwischen dem letzten Spi
 
 ---
 Eine Liste der Spiel-Einteilungen (Spieltag, Vorrunde, Finale, ...) der als Parameter zu übergebenden Liga + Saison
-> [https://api.openligadb.de/getavailablegroups/bl1/2022](https://api.openligadb.de/getavailablegroups/bl1/2022)
+> [https://api.openligadb.de/getavailablegroups/bl1/2026](https://api.openligadb.de/getavailablegroups/bl1/2026)
 
 ---
-Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2022/2023.
-> [https://api.openligadb.de/getlastchangedate/bl1/2022/8](https://api.openligadb.de/getlastchangedate/bl1/2022/8)
+Datum und Uhrzeit der letzten Änderung in den Daten des 8. Spieltages der ersten Bundesliga 2026/2027.
+> [https://api.openligadb.de/getlastchangedate/bl1/2026/8](https://api.openligadb.de/getlastchangedate/bl1/2026/8)
 
 Diese Methode dient zur Ermittlung der Änderung von Spieldaten, um unnötiges Pollen der o.g. Service-Methoden zu vermeiden.
 
@@ -82,7 +82,7 @@ Das nächste anstehende Spiel des als Parameter zu übergebenden Teams der ebenf
 
 ---
 Alle Teams einer Liga:
-> [https://api.openligadb.de/getavailableteams/bl1/2022](https://api.openligadb.de/getavailableteams/bl1/2022)
+> [https://api.openligadb.de/getavailableteams/bl1/2026](https://api.openligadb.de/getavailableteams/bl1/2026)
 
 
 ---
@@ -91,12 +91,12 @@ Die Spiele, bei welchen die als Parameter übergebenen Teams gegeneinander spiel
 
 ---
 Die Torschützen der übergebenen Liga:
-> [https://api.openligadb.de/getgoalgetters/bl1/2022](https://api.openligadb.de/getgoalgetters/bl1/2022)
+> [https://api.openligadb.de/getgoalgetters/bl1/2026](https://api.openligadb.de/getgoalgetters/bl1/2026)
 
 
 ---
-Die Tabelle ersten Bundesliga 2022/2023
-> [https://api.openligadb.de/getbltable/bl1/2022](https://api.openligadb.de/getbltable/bl1/2022)
+Die Tabelle ersten Bundesliga 2026/2027
+> [https://api.openligadb.de/getbltable/bl1/2026](https://api.openligadb.de/getbltable/bl1/2026)
 
 
 ## Api-Rückgabetypen

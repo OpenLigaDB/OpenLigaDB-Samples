@@ -14,7 +14,7 @@ if (!empty($_GET["spieltag"])) {
 }
 
 // Retrieve the data for the current matchday from the OpenLigaDB API
-$url = sprintf("https://api.openligadb.de/getmatchdata/bl1/2022/%d", $current);
+$url = sprintf("https://api.openligadb.de/getmatchdata/bl1/2026/%d", $current);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -61,13 +61,13 @@ if ($matches === null) {
 
 <body>
 <h1>Fußballdaten per PHP abrufen</h1>
-<h2>Spielergebnisse, Tore und mehr unter <a href="http://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
+<h2>Spielergebnisse, Tore und mehr unter <a href="https://www.OpenLigaDb.de" target="_blank">OpenLigaDB</a>!</h2>
 
 <div>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <label for="spieltag">Spieltag:</label>
         <input class="<?php echo $error === true ? "error" : ""; ?>" type="text" id="spieltag" name="spieltag"/>
-        <button type="submit">Lade Spieltag (Saison 2022/2023)</button>
+        <button type="submit">Lade Spieltag (Saison 2026/2027)</button>
     </form>
     <table>
         <thead>
