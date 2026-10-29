@@ -11,6 +11,13 @@ Object.keys(document.defaultView).forEach((property) => {
     }
 });
 
-global.navigator = {
-    userAgent: 'node.js'
-};
+// Seit Node 18 ist `navigator` ein Getter-only-Global, eine direkte Zuweisung
+// würde daher einen TypeError werfen. defineProperty funktioniert in alten
+// und neuen Node-Versionen.
+Object.defineProperty(global, 'navigator', {
+    value: {
+        userAgent: 'node.js'
+    },
+    writable: true,
+    configurable: true
+});

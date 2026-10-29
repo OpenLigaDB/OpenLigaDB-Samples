@@ -59,7 +59,7 @@ describe('Games',() => {
         return wrapper.instance().fetchAllGames().then(resp => {
           expect(resp.data).not.to.be.null;
           expect(resp.data).not.to.be.undefined;
-          expect(wrapper.state().games).to.equal(resp.data);
+          expect(wrapper.state().games).to.eql(resp.data);
         });
 
       });
@@ -172,6 +172,51 @@ describe('Games',() => {
         });
 
         expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(3);
+      });
+
+    });
+
+    describe('must determine the final result by resultTypeID',() => {
+
+      const cloneStub = () => JSON.parse(JSON.stringify(require('../testUtils/validStubResponse.json')));
+
+      it('regardless of the position inside matchResults',() => {
+        const reversedResults = cloneStub();
+        reversedResults[0].matchResults.reverse();
+
+        wrapper.setState({
+          games: reversedResults
+        });
+
+        const game = wrapper.find('MuiThemeProvider').find('Game').at(0);
+
+        expect(game.prop('isGameFinished')).to.equal(true);
+        expect(game.prop('hometeamgoals')).to.equal(2);
+        expect(game.prop('guestteamgoals')).to.equal(3);
+      });
+
+      it('and must not render a score if no final result is available',() => {
+        const withoutFinalResult = cloneStub();
+        withoutFinalResult[0].matchResults = withoutFinalResult[0].matchResults
+          .filter(result => result.resultTypeID !== 2);
+
+        wrapper.setState({
+          games: withoutFinalResult
+        });
+
+        const game = wrapper.find('MuiThemeProvider').find('Game').at(0);
+
+        expect(game.prop('isGameFinished')).to.equal(false);
+        expect(game.prop('hometeamgoals')).to.be.null;
+        expect(game.prop('guestteamgoals')).to.be.null;
+      });
+
+      it('and must not throw if matchResults is missing',() => {
+        const withoutResults = cloneStub();
+        delete withoutResults[0].matchResults;
+
+        expect(() => wrapper.setState({ games: withoutResults })).not.to.throw();
+        expect(wrapper.find('MuiThemeProvider').find('Game')).to.have.length(1);
       });
 
     });
